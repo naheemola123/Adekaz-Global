@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Shop vegetable oil, beads and handmade bead creations from ADEKAZ GLOBAL.">
+    <meta name="description" content="Shop vegetable oil, beads and handmade bead creations from AdeNofs GLOBAL.">
     <link rel="icon" type="image/png" href="adekaz_global_assets/AdeKaz African Roots Global Dreams Emblem.png">
-    <title>ADEKAZ GLOBAL | African Roots. Global Dreams.</title>
+    <title>AdeNofs GLOBAL | African Roots. Global Dreams.</title>
     <style>
         :root {
             --green: #123b2d;
@@ -451,7 +451,7 @@
 <body>
     <header class="top">
         <div class="wrap">
-            <nav><a class="brand" href="#home"><span class="mark">A</span><span><strong>ADEKAZ
+            <nav><a class="brand" href="#home"><span class="mark">A</span><span><strong>AdeNofs
                             GLOBAL</strong><small>AFRICAN ROOTS. GLOBAL DREAMS.</small></span></a>
                 <div class="navlinks"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#story">Our Story</a><a
                         href="#contact">Contact</a></div><a class="btn" href="#shop">Shop products</a>
@@ -472,7 +472,7 @@
                 <div class="hero-art">
                     <div>
                         <div class="big">A ✦</div>
-                        <h2 style="color:#f7e7b9;font:normal 25px Georgia,serif;margin:0">ADEKAZ GLOBAL</h2>
+                        <h2 style="color:#f7e7b9;font:normal 25px Georgia,serif;margin:0">AdeNofs GLOBAL</h2>
                         <p>Nature’s goodness. African-inspired creativity. Service you can trust.</p>
                         <div class="pill">Vegetable oil</div>
                         <div class="pill">Beads & handmade</div>
@@ -522,7 +522,7 @@
                     <div>
                         <div class="eyebrow">Our story</div>
                         <h2>Rooted in Africa.<br>Made for the world.</h2>
-                        <p>ADEKAZ GLOBAL brings together two sides of our business: vegetable oil for homes and
+                        <p>AdeNofs GLOBAL brings together two sides of our business: vegetable oil for homes and
                             businesses, and beads and handmade creations inspired by creativity and craftsmanship.</p>
                         <p>Our promise is to serve customers with care, clear communication, and products presented with
                             pride.</p>
@@ -553,7 +553,7 @@
         <div class="wrap">
             <div class="footerrow">
                 <div>
-                    <div class="brand"><span class="mark">A</span><span><strong>ADEKAZ GLOBAL</strong><small>AFRICAN
+                    <div class="brand"><span class="mark">A</span><span><strong>AdeNofs GLOBAL</strong><small>AFRICAN
                                 ROOTS. GLOBAL DREAMS.</small></span></div>
                     <p><small>Quality products. Creative craftsmanship.</small></p>
                 </div>
@@ -565,7 +565,7 @@
                     <p><small>WhatsApp ordering<br>Retail & wholesale enquiries</small></p>
                 </div>
             </div>
-            <hr style="border:0;border-top:1px solid #355344;margin:20px 0"><small>© <span id="year"></span> ADEKAZ
+            <hr style="border:0;border-top:1px solid #355344;margin:20px 0"><small>© <span id="year"></span> AdeNofs
                 GLOBAL</small>
         </div>
     </footer>
@@ -590,8 +590,8 @@
         function updateBar() { let count = [...selected.values()].reduce((a, b) => a + b, 0); document.getElementById('cartcount').textContent = `${count} item${count === 1 ? '' : 's'} selected`; document.getElementById('cartbar').style.display = count ? 'flex' : 'none' }
         function validNumber() { return /^\d{10,15}$/.test(WHATSAPP_NUMBER) && !WHATSAPP_NUMBER.endsWith('0000000000') }
         function sendText(text) { if (!validNumber()) { alert('The WhatsApp number is still a placeholder. Ask the site owner to set the correct business number before ordering.'); return } window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener') }
-        function sendOrder() { if (!selected.size) { alert('Please choose at least one product and quantity.'); return } let lines = [...selected].map(([id, q]) => { let p = products.find(x => x.id === id); return `• ${p.name} — quantity: ${q}` }); sendText('Hello ADEKAZ GLOBAL! I would like to place an order / request a quote:\n\n' + lines.join('\n') + '\n\nPlease confirm availability, total price, delivery options and payment details.'); }
-        function contactWhatsApp() { sendText('Hello ADEKAZ GLOBAL! I would like to enquire about your vegetable oil, wholesale orders, beads or handmade creations.'); }
+        function sendOrder() { if (!selected.size) { alert('Please choose at least one product and quantity.'); return } let lines = [...selected].map(([id, q]) => { let p = products.find(x => x.id === id); return `• ${p.name} — quantity: ${q}` }); sendText('Hello AdeNofs GLOBAL! I would like to place an order / request a quote:\n\n' + lines.join('\n') + '\n\nPlease confirm availability, total price, delivery options and payment details.'); }
+        function contactWhatsApp() { sendText('Hello AdeNofs GLOBAL! I would like to enquire about your vegetable oil, wholesale orders, beads or handmade creations.'); }
         document.getElementById('year').textContent = new Date().getFullYear(); render();
     </script>
 </body>
