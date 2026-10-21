@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shop vegetable oil, beads and handmade bead creations from ADEKAZ GLOBAL.">
+    <link rel="icon" type="image/png" href="adekaz_global_assets/AdeKaz African Roots Global Dreams Emblem.png">
+    <title>ADEKAZ GLOBAL | African Roots. Global Dreams.</title>
+    <style>
+        :root {
+            --green: #123b2d;
+            --green2: #1c5540;
+            --gold: #d9b45d;
+            --cream: #faf6ed;
+            --ink: #20251f;
+            --muted: #69716a;
+            --line: #e8e1d3
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.5
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .wrap {
+            width: min(1120px, 92%);
+            margin: auto
+        }
+
+        .top {
+            background: var(--green);
+            color: #fff;
+            border-bottom: 2px solid var(--gold)
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 17px 0
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px
+        }
+
+        .mark {
+            height: 45px;
+            width: 45px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: var(--gold);
+            font-family: Georgia, serif;
+            font-size: 25px
+        }
+
+        .brand strong {
+            display: block;
+            color: var(--gold);
+            font: bold 22px Georgia, serif;
+            letter-spacing: 2px
+        }
+
+        .brand small {
+            font-size: 10px;
+            letter-spacing: 1.5px
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 22px;
+            font-size: 14px
+        }
+
+        .hero {
+            background: linear-gradient(100deg, rgba(10, 39, 29, .96), rgba(10, 39, 29, .72)), radial-gradient(circle at 80% 15%, #8e743e, transparent 38%);
+            color: white;
+            padding: 70px 0 62px
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 35px
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px
+        }
+
+        .hero h1 {
+            font: normal clamp(36px, 5vw, 62px)/1.08 Georgia, serif;
+            margin: 13px 0
+        }
+
+        .hero p {
+            max-width: 550px;
+            color: #eee8dc
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            border-radius: 5px;
+            padding: 12px 18px;
+            font-weight: bold;
+            cursor: pointer;
+            background: var(--gold);
+            color: #1e2b21
+        }
+
+        .btn.secondary {
+            border: 1px solid #e8d7a5;
+            background: transparent;
+            color: white
+        }
+
+        .hero-art {
+            min-height: 260px;
+            border: 1px solid #8d7742;
+            border-radius: 18px;
+            background: linear-gradient(145deg, #1d513c, #0a251c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero-art:before,
+        .hero-art:after {
+            content: "";
+            position: absolute;
+            width: 210px;
+            height: 210px;
+            border: 1px solid rgba(217, 180, 93, .25);
+            border-radius: 50%
+        }
+
+        .hero-art:after {
+            width: 150px;
+            height: 150px
+        }
+
+        .hero-art div {
+            position: relative;
+            z-index: 1
+        }
+
+        .hero-art .big {
+            font: 50px Georgia, serif;
+            color: var(--gold)
+        }
+
+        .hero-art p {
+            font-size: 13px;
+            max-width: 220px;
+            margin: 4px auto
+        }
+
+        .section {
+            padding: 45px 0
+        }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 20px
+        }
+
+        .section h2 {
+            font: normal 31px Georgia, serif;
+            margin: 0
+        }
+
+        .sub {
+            color: var(--muted);
+            margin: 4px 0 0
+        }
+
+        .categories,
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px
+        }
+
+        .category {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 22px;
+            min-height: 155px
+        }
+
+        .category .symbol {
+            font-size: 28px;
+            color: #9b772f
+        }
+
+        .category h3 {
+            margin: 10px 0 4px
+        }
+
+        .category p {
+            font-size: 14px;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .product {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            display: flex;
+            flex-direction: column
+        }
+
+        .product-art {
+            height: 175px;
+            background: linear-gradient(145deg, #e9dfc8, #faf5e8);
+            display: grid;
+            place-items: center;
+            color: var(--green);
+            font-size: 45px;
+            overflow: hidden
+        }
+
+        .product-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 8px;
+            display: block
+        }
+
+        .product-body {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex: 1
+        }
+
+        .product h3 {
+            font-size: 16px;
+            margin: 0 0 5px
+        }
+
+        .product p {
+            font-size: 13px;
+            color: var(--muted);
+            margin: 0 0 12px
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--green);
+            margin-top: auto;
+            margin-bottom: 12px
+        }
+
+        .product button {
+            width: 100%
+        }
+
+        .story {
+            background: var(--green);
+            color: #fff;
+            padding: 42px;
+            border-radius: 14px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px
+        }
+
+        .story h2 {
+            font: normal 30px Georgia, serif;
+            margin: 8px 0
+        }
+
+        .story p {
+            color: #e3e9e1
+        }
+
+        .pill {
+            display: inline-block;
+            border: 1px solid #688574;
+            border-radius: 20px;
+            padding: 6px 10px;
+            font-size: 12px;
+            margin: 3px
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 18px;
+            background: #eee5d2;
+            padding: 25px;
+            border-radius: 12px
+        }
+
+        .footer {
+            background: #0c281e;
+            color: #fff;
+            padding: 30px 0;
+            margin-top: 40px
+        }
+
+        .footerrow {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            flex-wrap: wrap
+        }
+
+        .footer small {
+            color: #d8dfd8
+        }
+
+        .note {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 14px
+        }
+
+        .wa {
+            background: #168b55;
+            color: #fff
+        }
+
+        .cartbar {
+            position: sticky;
+            bottom: 0;
+            background: #fff;
+            border-top: 1px solid var(--line);
+            padding: 10px 4%;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -4px 18px #0001;
+            z-index: 5
+        }
+
+        .qty {
+            width: 65px;
+            padding: 8px;
+            border: 1px solid var(--line);
+            border-radius: 5px;
+            margin-bottom: 10px
+        }
+
+        @media(max-width:760px) {
+            .navlinks {
+                display: none
+            }
+
+            .hero {
+                padding: 45px 0
+            }
+
+            .hero-grid,
+            .story {
+                grid-template-columns: 1fr
+            }
+
+            .hero-art {
+                min-height: 200px
+            }
+
+            .categories {
+                grid-template-columns: 1fr
+            }
+
+            .products {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px
+            }
+
+            .product-art {
+                height: 125px
+            }
+
+            .product-body {
+                padding: 11px
+            }
+
+            .section {
+                padding: 32px 0
+            }
+
+            .story {
+                padding: 25px
+            }
+
+            .contact {
+                grid-template-columns: 1fr
+            }
+
+            .brand strong {
+                font-size: 18px
+            }
+        }
+
+        @media(max-width:380px) {
+            .products {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <div class="wrap">
+            <nav><a class="brand" href="#home"><span class="mark">A</span><span><strong>ADEKAZ
+                            GLOBAL</strong><small>AFRICAN ROOTS. GLOBAL DREAMS.</small></span></a>
+                <div class="navlinks"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#story">Our Story</a><a
+                        href="#contact">Contact</a></div><a class="btn" href="#shop">Shop products</a>
+            </nav>
+        </div>
+    </header>
+    <main id="home">
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <div class="eyebrow">Quality products · Creative craftsmanship</div>
+                    <h1>African roots.<br><em>Global dreams.</em></h1>
+                    <p>Shop vegetable oil for everyday use or wholesale, and discover beads and handmade creations made
+                        with care.</p>
+                    <div class="buttons"><a class="btn" href="#shop">Explore products →</a><a class="btn secondary"
+                            href="#contact">Ask about wholesale</a></div>
+                </div>
+                <div class="hero-art">
+                    <div>
+                        <div class="big">A ✦</div>
+                        <h2 style="color:#f7e7b9;font:normal 25px Georgia,serif;margin:0">ADEKAZ GLOBAL</h2>
+                        <p>Nature’s goodness. African-inspired creativity. Service you can trust.</p>
+                        <div class="pill">Vegetable oil</div>
+                        <div class="pill">Beads & handmade</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <h2>Shop by category</h2>
+                        <p class="sub">Find what you need, from everyday essentials to handcrafted pieces.</p>
+                    </div>
+                </div>
+                <div class="categories"><a class="category" href="#shop">
+                        <div class="symbol">◉</div>
+                        <h3>Vegetable Oil</h3>
+                        <p>Retail quantities and wholesale enquiries.</p>
+                    </a><a class="category" href="#shop">
+                        <div class="symbol">◈</div>
+                        <h3>Beads & Accessories</h3>
+                        <p>Beads and accessories to complement your style.</p>
+                    </a><a class="category" href="#shop">
+                        <div class="symbol">✳</div>
+                        <h3>Handmade Creations</h3>
+                        <p>Custom bead designs made with care.</p>
+                    </a></div>
+            </div>
+        </section>
+        <section class="section" id="shop" style="background:#fff">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <h2>Featured products</h2>
+                        <p class="sub">Choose an item and send your order directly to WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="products" id="products"></div>
+                <p class="note">Prices shown are examples. Replace them with your actual prices before publishing.
+                    Wholesale pricing can be confirmed on WhatsApp.</p>
+            </div>
+        </section>
+        <section class="section" id="story">
+            <div class="wrap">
+                <div class="story">
+                    <div>
+                        <div class="eyebrow">Our story</div>
+                        <h2>Rooted in Africa.<br>Made for the world.</h2>
+                        <p>ADEKAZ GLOBAL brings together two sides of our business: vegetable oil for homes and
+                            businesses, and beads and handmade creations inspired by creativity and craftsmanship.</p>
+                        <p>Our promise is to serve customers with care, clear communication, and products presented with
+                            pride.</p>
+                    </div>
+                    <div>
+                        <h3>What you can expect</h3>
+                        <p>✓ Friendly, direct service<br>✓ Retail and wholesale enquiries<br>✓ Handmade and custom bead
+                            requests<br>✓ Clear order and delivery confirmation</p>
+                        <p class="note" style="color:#dbe3dc">Add your real founder story, business location and
+                            verified customer reviews here as the business grows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="contact">
+            <div class="wrap">
+                <div class="contact">
+                    <div>
+                        <h2 style="font:normal 27px Georgia,serif;margin:0">Have a bulk order or custom request?</h2>
+                        <p class="sub">Message us on WhatsApp to confirm availability, quantity, pricing and delivery.
+                        </p>
+                    </div><button class="btn wa" onclick="contactWhatsApp()">Chat on WhatsApp ↗</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footerrow">
+                <div>
+                    <div class="brand"><span class="mark">A</span><span><strong>ADEKAZ GLOBAL</strong><small>AFRICAN
+                                ROOTS. GLOBAL DREAMS.</small></span></div>
+                    <p><small>Quality products. Creative craftsmanship.</small></p>
+                </div>
+                <div><strong>Explore</strong>
+                    <p><a href="#shop">Shop products</a><br><a href="#story">Our story</a><br><a href="#contact">Contact
+                            us</a></p>
+                </div>
+                <div><strong>Orders</strong>
+                    <p><small>WhatsApp ordering<br>Retail & wholesale enquiries</small></p>
+                </div>
+            </div>
+            <hr style="border:0;border-top:1px solid #355344;margin:20px 0"><small>© <span id="year"></span> ADEKAZ
+                GLOBAL</small>
+        </div>
+    </footer>
+    <div class="cartbar" id="cartbar"><span id="cartcount">0 items selected</span><button class="btn wa"
+            onclick="sendOrder()">Send order to WhatsApp</button></div>
+    <script>
+        // SETUP: Replace the placeholder with your WhatsApp number including country code, digits only (Nigeria: 234..., no + or spaces).
+        const WHATSAPP_NUMBER = "2349152339545";
+        // Replace these sample products and prices with your real inventory before publishing.
+        const products = [
+            { id: 1, name: "King’s Vegetable Oil — Small Quantity", desc: "Ask about available bottle sizes and quantities.", price: "Price on request", symbol: "◉", type: "Oil", image: "adekaz_global_assets/kings.jpg" },
+            { id: 2, name: "King’s Vegetable Oil — Wholesale", desc: "Bulk orders for retailers and businesses.", price: "Wholesale quote", symbol: "◉", type: "Oil", image: "adekaz_global_assets/kings-oil-wholesale.svg" },
+            { id: 3, name: "Beads & Accessories", desc: "Browse available beads and accessories.", price: "Price on request", symbol: "◈", type: "Beads", image: "adekaz_global_assets/bag 2.jpg" },
+            { id: 4, name: "Handmade Beaded Bracelet", desc: "Handmade design; colours may vary.", price: "Price on request", symbol: "◎", type: "Beads", image: "adekaz_global_assets/beaded-bracelet.svg" },
+            { id: 5, name: "Beaded Necklace", desc: "Ask about ready-made styles and colours.", price: "Price on request", symbol: "◈", type: "Beads", image: "adekaz_global_assets/beaded-necklace.svg" },
+            { id: 6, name: "Custom Bead Creation", desc: "Tell us your preferred design and budget.", price: "Request a quote", symbol: "✳", type: "Custom", image: "adekaz_global_assets/hand-crafted bg.jpg" }
+        ];
+        const selected = new Map();
+        function render() { document.getElementById('products').innerHTML = products.map(p => `<article class="product"><div class="product-art">${p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.textContent='${p.symbol}'">` : p.symbol}</div><div class="product-body"><h3>${p.name}</h3><p>${p.desc}</p><div class="price">${p.price}</div><label for="q${p.id}" style="font-size:12px;color:#69716a">Quantity / packs</label><input class="qty" id="q${p.id}" type="number" min="0" step="1" value="0" inputmode="numeric" onchange="setQty(${p.id},this.value)" aria-label="Quantity for ${p.name}"><button class="btn" onclick="addOne(${p.id})">Add 1 to order</button></div></article>`).join('') }
+        function setQty(id, v) { let n = Math.max(0, Math.floor(Number(v) || 0)); if (n) selected.set(id, n); else selected.delete(id); updateBar() }
+        function addOne(id) { let n = (selected.get(id) || 0) + 1; selected.set(id, n); document.getElementById('q' + id).value = n; updateBar() }
+        function updateBar() { let count = [...selected.values()].reduce((a, b) => a + b, 0); document.getElementById('cartcount').textContent = `${count} item${count === 1 ? '' : 's'} selected`; document.getElementById('cartbar').style.display = count ? 'flex' : 'none' }
+        function validNumber() { return /^\d{10,15}$/.test(WHATSAPP_NUMBER) && !WHATSAPP_NUMBER.endsWith('0000000000') }
+        function sendText(text) { if (!validNumber()) { alert('The WhatsApp number is still a placeholder. Ask the site owner to set the correct business number before ordering.'); return } window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener') }
+        function sendOrder() { if (!selected.size) { alert('Please choose at least one product and quantity.'); return } let lines = [...selected].map(([id, q]) => { let p = products.find(x => x.id === id); return `• ${p.name} — quantity: ${q}` }); sendText('Hello ADEKAZ GLOBAL! I would like to place an order / request a quote:\n\n' + lines.join('\n') + '\n\nPlease confirm availability, total price, delivery options and payment details.'); }
+        function contactWhatsApp() { sendText('Hello ADEKAZ GLOBAL! I would like to enquire about your vegetable oil, wholesale orders, beads or handmade creations.'); }
+        document.getElementById('year').textContent = new Date().getFullYear(); render();
+    </script>
+</body>
+
+</html>
